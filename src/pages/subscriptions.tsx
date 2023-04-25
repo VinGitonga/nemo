@@ -1,9 +1,13 @@
 import MainLayout from "@/layouts/MainLayout";
 import { NextPageWithLayout } from "@/types/Layout";
+import Head from "next/head";
 
 const Subscriptions: NextPageWithLayout = () => {
   return (
     <div>
+      <Head>
+        <title>NeMO | My Subscriptions</title>
+      </Head>
       <h1 className="text-3xl font-semibold">Subscriptions</h1>
       <div className="my-4 space-x-3">
         <button

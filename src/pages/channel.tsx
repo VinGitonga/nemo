@@ -1,5 +1,6 @@
 import MainLayout from "@/layouts/MainLayout";
 import { NextPageWithLayout } from "@/types/Layout";
+import Head from "next/head";
 import { AiFillHeart } from "react-icons/ai";
 import { BsStar } from "react-icons/bs";
 import { FiUpload, FiFlag } from "react-icons/fi";
@@ -8,6 +9,9 @@ import { HiOutlineBell } from "react-icons/hi";
 const Channel: NextPageWithLayout = () => {
   return (
     <>
+    <Head>
+      <title>NeMO | Channel</title>
+    </Head>
       <img
         src="https://m.media-amazon.com/images/I/71vgPG6gLiL.jpg"
         alt=""

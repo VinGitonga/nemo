@@ -10,6 +10,7 @@ import { HiOutlineBell } from "react-icons/hi";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 import { RiYoutubeFill } from "react-icons/ri";
 import { IoLinkSharp } from "react-icons/io5";
+import Head from "next/head";
 
 interface NavBtnProps {
   Icon: IconType;
@@ -19,6 +20,9 @@ interface NavBtnProps {
 const Broadcast: NextPageWithLayout = () => {
   return (
     <>
+      <Head>
+        <title>NeMO | Broadcast</title>
+      </Head>
       <div className="grid grid-cols-10 w-full max-h-[500px]">
         <div className="col-span-8">
           <ReactPlayer

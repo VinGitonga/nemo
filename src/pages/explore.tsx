@@ -1,9 +1,15 @@
 import MainLayout from "@/layouts/MainLayout";
 import { NextPageWithLayout } from "@/types/Layout";
+import Head from "next/head";
 
 const Explore: NextPageWithLayout = () => {
   return (
     <div>
+      <Head>
+        <title>
+        NeMO | Explore
+        </title>
+      </Head>
       <h1 className="text-3xl font-semibold">Explore</h1>
       <div className="my-4 space-x-3">
         <button

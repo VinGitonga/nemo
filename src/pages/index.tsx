@@ -1,9 +1,13 @@
 import MainLayout from "@/layouts/MainLayout";
 import { NextPageWithLayout } from "@/types/Layout";
+import Head from "next/head";
 
 const Home: NextPageWithLayout = () => {
   return (
     <div>
+      <Head>
+        <title>NeMO | Home</title>
+      </Head>
       <h1 className="text-3xl font-semibold">Hi Olivia!</h1>
       <p className="my-7 text-xl">Active channels you might like.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
