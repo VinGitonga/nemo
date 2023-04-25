@@ -1,39 +1,40 @@
 import MainLayout from "@/layouts/MainLayout";
 import { NextPageWithLayout } from "@/types/Layout";
 
-const Home: NextPageWithLayout = () => {
+const Subscriptions: NextPageWithLayout = () => {
   return (
     <div>
-      <h1 className="text-3xl font-semibold">Hi Olivia!</h1>
-      <p className="my-7 text-xl">Active channels you might like.</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+      <h1 className="text-3xl font-semibold">Subscriptions</h1>
+      <div className="my-4 space-x-3">
+        <button
+          type="button"
+          className="text-gray-900 bg-gray-100 border border-gray-300 focus:outline-none hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2 mr-2 mb-2 "
+        >
+          All
+        </button>
+        <button
+          type="button"
+          className="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        >
+          Live
+        </button>
+        <button
+          type="button"
+          className="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        >
+          Finished Lives
+        </button>
+        <button
+          type="button"
+          className="text-gray-900 bg-white focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        >
+          Channels
+        </button>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 mt-8">
         {[...Array(9)].map((_, i) => (
           <ChannelItem key={i} />
         ))}
-      </div>
-      <div className="flex justify-center items-center my-8">
-        <button
-          type="button"
-          className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-        >
-          Show More
-        </button>
-      </div>
-      <div className="mt-8">
-        <p className="my-7 text-xl">Continue watching?</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-          {[...Array(9)].map((_, i) => (
-            <ChannelItem key={i} />
-          ))}
-        </div>
-      </div>
-      <div className="flex justify-center items-center my-8">
-        <button
-          type="button"
-          className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-        >
-          Show More
-        </button>
       </div>
     </div>
   );
@@ -75,6 +76,7 @@ const ChannelItem = () => {
     </div>
   );
 };
-Home.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
-export default Home;
+Subscriptions.getLayout = (page) => <MainLayout>{page}</MainLayout>;
+
+export default Subscriptions;
